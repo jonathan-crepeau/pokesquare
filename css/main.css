@@ -1,3 +1,25 @@
-body {
-    background: peru;
+html, body {
+    background-color: #fff;
+}
+
+.squares div {
+    width: 5vh;
+    height: 5vh;
+    margin-right: 1%;
+    display: inline-block;
+    background-color: blue;
+}
+
+header {
+    display: block;
+    height: 100px;
+    background-color: pink;
+    padding: 10px;
+    outline: 1px black solid;
+    margin: 5px;
+}
+
+button {
+    float: right;
+    margin-right: 50%;
 }
