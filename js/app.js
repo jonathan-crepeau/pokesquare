@@ -30,8 +30,6 @@ const applyRandomColor = (square) => {
 }
 
 function handlePoke(event) {
-    // (event.target).style.opacity = 0;
-
     $(event.target).css('opacity', 0);
     const color = $(event.target).css('background-color');
     console.log(color);
