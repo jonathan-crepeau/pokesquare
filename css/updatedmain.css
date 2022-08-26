@@ -29,3 +29,10 @@ body {
     flex-flow: row wrap;
     justify-content: center;
 }
+
+.game-square {
+    height: 5vh;
+    width: 5vw;
+    margin: 5px;
+    /* background-color: blue; */
+}
