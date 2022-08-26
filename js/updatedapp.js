@@ -16,6 +16,7 @@ function playBall(numberOfSquares) {
         assignColor(square);
         $('.squares-container').append(square);
     }
+    $('.game-square').on('click', handleClick);
 }
 
 function assignColor(element) {
@@ -27,4 +28,24 @@ function assignColor(element) {
     } else {
         $(element).css('background-color', 'green');
     }
+}
+
+function handleClick(event) {
+    console.log('square clicked');
+    const color = $(event.target).css('background-color');
+    console.log(color);
+    updateScore(color);
+    $(event.target).remove();
+}
+
+function updateScore(color) {
+    const colorCheck = color.substring(4, color.length - 1).split(" ");
+    if (colorCheck[2] === '255') {
+        score++;
+        $('.scoreboard').html('scoreboard: ' + score);
+    } else {
+        score--;
+        $('.scoreboard').html('scoreboard: ' + score);
+    }
+    console.log(colorCheck);
 }
