@@ -82,12 +82,12 @@ function setRounds() {
 
 // SECTION - Recursive Functions
 
-function loop(x) {
+function xLoop(x) {
     if (x >= 10) {
         return;
     }
     console.log(x);
-    loop(x + 1);
+    xLoop(x + 1);
 }
 
 function recursiveLoop(y) {
@@ -97,3 +97,20 @@ function recursiveLoop(y) {
     console.log(y);
     recursiveLoop(y - 1);
 }
+
+
+// SECTION - Set Interval
+
+let myNumber = 0;
+
+function intervalConsole() {
+    const timer = setInterval(function() {
+        if (myNumber >= 10) {
+            clearInterval(timer);
+        }
+        console.log(myNumber);
+        myNumber++;
+    }, 1000);
+}
+
+// intervalConsole();
